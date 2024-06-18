@@ -1,24 +1,17 @@
-#from chatterbot import ChatBot
-#from chatterbot.trainers import ListTrainer
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
 from tkinter import *
 import pyttsx3 as pp
 
 engine=pp.init()
 
-voices = engine.getProperty('voices')
-
-engine.setProperty('voice', voices(0).id)
-
-def speak(word):
-    engine.say(word)
-    engine.runAndWait()
     
 #install : pip install chatterbot
 #install :pip install pyttsx3
 
 
 
-''''bot = ChatBot("MY CHATBOT")
+bot = ChatBot("MY CHATBOT")
 conversation = [
     "Hello",
     "Hi there!",
@@ -36,12 +29,11 @@ conversation = [
 trainer = ListTrainer(bot)
 
 trainer.train(conversation)
-'''
 
 main = Tk()
 main.geometry("500x650")
 main.title("My CHATBOT")
-#img = PhotoImage(file="chat.png")
+img = PhotoImage(file="chat.png")
 
 #photoL = Label(main,image=img)
 #photoL.pack(pady=5)
